@@ -27,7 +27,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: sudo apt-get install shellcheck --assume-yes --no-install-recommends
-      - run: shellcheck scripts/dev_setup.sh
 
   ecosystem-lint:
     runs-on: ubuntu-latest
@@ -57,7 +56,6 @@ jobs:
         working-directory: ecosystem/platform/server
     steps:
       - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1
         with:
           working-directory: ecosystem/platform/server
           bundler-cache: true
